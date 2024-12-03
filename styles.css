@@ -1,0 +1,161 @@
+/* Estilo general para la imagen */
+.container {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para el header (título con fondo verde) */
+header {
+    background-color: #28a745; /* Fondo verde */
+    width: 100%;
+    padding: 15px 0; /* Espaciado superior e inferior */
+    text-align: center;
+    color: white;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+header h1 {
+    font-size: 1.75rem;
+    margin: 0; /* Eliminar márgenes predeterminados */
+}
+
+/* Ajustar la imagen dentro del contenedor sin que se distorsione */
+.fondo-imagen {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain; /* Ajuste de la imagen */
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los botones de control */
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.control-btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el contenedor de los botones de los puestos */
+.botones-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones de puestos */
+.botones-container button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.botones-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el botón de salir */
+.salir-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.salir {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.salir:hover {
+    background-color: #c82333;
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .control-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .botones-container button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .salir {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    .control-btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .botones-container button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .salir {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
