@@ -65,8 +65,12 @@ document.getElementById('piso5Btn').addEventListener('click', () => cambiarPiso(
 
 // Botón de salir
 document.getElementById('salirBtn').addEventListener('click', () => {
-    if (confirm("¿Estás seguro que deseas salir?")) {
-        window.close(); // Cierra la ventana
+    if (confirm("¿Estás seguro de que deseas salir?")) {
+        // Intentar cerrar la ventana
+        const cerrada = window.close();
+        if (!cerrada) {
+            alert("El navegador no permite cerrar esta ventana automáticamente. Por favor, ciérrala manualmente.");
+        }
     }
 });
 
